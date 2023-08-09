@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  
+  int edades[10];
+
+ 
+  for (int i = 0; i < 10; i++) { //Para almacenar las 10 edades.
+    cout << "Ingrese la edad No. " << i + 1 << ": ";
+    cin >> edades[i];
+  }
+
+ 
+  for (int j = 0; j < 10 - 1; j++) { //Para ordenar de menor a mayor las edades.
+    for (int k = 0; k < 10 - k - 1; k++) {
+      if (edades[k] > edades[k + 1]) {
+        int temp = edades[k];
+        edades[k] = edades[k + 1];
+        edades[k + 1] = temp;
+      }
+    }
+  }
+
+ 
+  cout << "El las edades ordenadas son:"; //Para mostrar las edades.
+  for (int m = 0; m < 10; m++) {
+    cout << edades[m] << " ";
+  }
+
+  cout << endl;
+
+  return 0;
+}
