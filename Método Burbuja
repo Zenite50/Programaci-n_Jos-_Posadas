@@ -1,0 +1,31 @@
+#include<iostream>
+#include<conio.h>
+//Método burbuja
+using namespace std;
+
+int main(){
+	int n[10];
+	int aux=0; 
+	 
+	 cout<<"Ingrese 10 numeros: "<<endl;
+	for(int num=0;num<11;num++){	
+	 cin>>n[num];	
+	}
+	 
+	for(int i=0;i<10;i++){
+	 for(int j=0;j<10;j++){
+      
+	   if(n[j]>n[j+1]){
+	 	aux=n[j];
+	 	n[j]=n[j+1];
+	 	n[j+1]=aux;
+	  }
+	 }
+	}
+for(int k=1;k<=10;k++){
+	cout<<n[k];
+}
+	
+getch();
+return 0;
+} 
